@@ -1,6 +1,9 @@
 name: Run Tests
 
 on:
+  push:
+    branches:
+      - master 
   pull_request:
     branches:
       - master
@@ -20,6 +23,10 @@ jobs:
       with:
         flutter-version: 'stable'
 
+    - name: Install dependencies
+      run: |
+        flutter pub get
+        
     # rodar os testes
     - name: Run tests
       run: flutter test --coverage

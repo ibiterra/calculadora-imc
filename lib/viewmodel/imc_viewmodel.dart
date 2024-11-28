@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:imc_mvvm/repositories/user_repository.dart';
 
-class ImcViewModel with ChangeNotifier {
+class ImcViewModel with ChangeNotifier { 
   final UserRepository userRepository;
   final TextEditingController heightController = TextEditingController();
   final TextEditingController weightController = TextEditingController();
