@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
                 controller: viewModel.weightController,
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "INSIRA SEU PESO!";
+                    return "INSIRA SEU PESO!!";
                   }
                   return null;
                 },
@@ -81,7 +81,7 @@ class _HomeState extends State<Home> {
                 controller: viewModel.heightController,
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return "INSIRA SUA ALTURA!";
+                    return "INSIRA SUA ALTURA!!";
                   }
                   return null;
                 },
