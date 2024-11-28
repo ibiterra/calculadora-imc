@@ -1,0 +1,25 @@
+name: Run Tests
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # verificar o repositório
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # instalar o Flutter
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: 'stable'
+
+    # rodar os testes
+    - name: Run tests
+      run: flutter test --coverage
