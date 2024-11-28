@@ -29,5 +29,3 @@ jobs:
     # rodar os testes
     - name: Run tests
       run: flutter test --coverage
-
-      
