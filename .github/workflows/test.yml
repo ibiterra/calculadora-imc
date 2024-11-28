@@ -9,7 +9,7 @@ on:
       - master
 
 jobs:
-  test:
+  flutter-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,8 +24,7 @@ jobs:
         flutter-version: 'stable'
 
     - name: Install dependencies
-      run: |
-        flutter pub get
+      run: flutter pub get
         
     # rodar os testes
     - name: Run tests
